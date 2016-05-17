@@ -2,9 +2,9 @@
 
 ## Contact Information
 
-- Department of Mathematics
-  Boyd Graduate Research Studies
-  University of Georgia
+- Department of Mathematics \\
+  Boyd Graduate Research Studies \\
+  University of Georgia \\
   Athens, Georgia 30602
 - [andrew.b.maurer@gmail.com](mailto:andrew.b.maurer@gmail.com)
 - [andrewmaurer.github.io](http://andrewmaurer.github.io)
