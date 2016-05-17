@@ -1,0 +1,220 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+%\usepackage{tocloft}
+\usepackage{amsmath,amssymb}
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\filbreak\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{{}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & {#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Andrew B. Maurer} & \texttt{andrew.b.maurer@gmail.com}  \\
+Department of Mathematics & \texttt{andrewmaurer.github.io} \\
+Boyd Graduate Research Studies\\
+University of Georgia \\
+Athens, Georgia 30602
+\end{tabular*}
+\\
+\blfootnote{Last updated \today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+
+\item \ressubheading{University of Georgia}{Athens, Georgia}{Mathematics, Ph.D Candidate.}{2014 -- Present}
+
+\begin{itemize}
+	\resitem{Advisor:} Daniel K. Nakano
+	\resitem{Research Area:} Cohomology of Lie superalgebras.
+\end{itemize}
+
+\item \ressubheading{University of Massachusetts}{Amherst, Massachusetts}{Mathematics, BS. Computer Science, Minor.}{2010 -- 2014}
+
+\begin{itemize}
+    \resitem{Advisor:} Farshid Hajir
+    \resitem{Senior Project:} Hasse-Witt invariants of Jacobi polynomials.
+\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+    \item \textbf{Representations, cohomology, and geometry of Lie superalgebras.} 
+    
+    I am studying the relative cohomology ring $\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{l};\mathbf{C})$ of a Lie superalgebra $\mathfrak g = \mathfrak g_{\bar 0} \oplus \mathfrak g_{\bar 1}$ relative to a reductive subalgebra $\mathfrak{l} \subseteq \mathfrak{g}_{\bar 0}$. My conjecture is that $\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{l};\mathbf{C})$ is finitely generated over $\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{g}_{\bar 0};\mathbf{C})$ and that there is a very nice spectral sequence abutting to this relative cohomology. Once this is established I will be able to use algebro-geometric techniques to investigate the mapping of support varieties induced by $\operatorname{H}^\bullet(\mathfrak{g},\mathfrak{g}_{\bar 0};\mathbf{C}) \to \operatorname{H}^\bullet(\mathfrak{g},\mathfrak{l};\mathbf{C})$.
+    
+    This research relies heavily on work by Benson, Boe, Carlson, Friedlander, Gruson, Hochschild, Kujawa, Nakano, Parshall, and Serre.
+    \item \textbf{Tropical geometry, algebra, and Grassmannians}
+    
+    The Grassmannian $\operatorname{Gr}(d,n)$ is often identified with the image of the Pl\"ucker embedding. This variety is isomorphic to the GIT quotient of $\operatorname{M}_{d \times n}$ by the (left) action of $\operatorname{GL}_d$. There has been much interest in defining tropical analogues of the Grassmannian, with several constructions due to Speyer and Sturmfels. With N. Giansiracusa, I have been working on an analogue that mimics the GIT construction. We have discovered many interesting similarities and many interesting differences when compared to the classical theory.
+    
+    This research relies heavily on work by  Fink, G. Giansiracusa, N. Giansiracusa, Rinc\'on, Speyer, and Sturmfels.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Talks Given}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+ \item \textbf{Cohomology, Support Varieties, and Lie Superalgebras} \hfill Spring 2016 \\
+       University of Colorado Boulder, Student Algebra Seminar
+ \item \textbf{Tropical linear spaces} \hfill Fall 2015 \\
+       UGA Tropical Geometry VRG
+ \item \textbf{The tropical Grassmannian} \hfill Fall 2015 \\
+       UGA Tropical Geometry VRG
+ \item \textbf{Asymptotically good families} \hfill Spring 2015 \\
+       UGA Graduate Student Seminar
+ \item \textbf{Determinental complexity of the permanent} \hfill Spring 2015 \\
+       UGA Student Algebraic Geometry Seminar
+ \item \textbf{Construction of Grassmannian for Schubert calculus} \hfill Fall 2014 \\
+       UGA Schubert Calculus on Grassmannian VRG 
+ \item \textbf{Computability with an eye towards elliptic curves} \hfill Fall 2014 \\
+       Elliptic Curves Discussion Section
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Conferences, Summer Schools, and Workshops Attended}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item \textbf{Topological \& Geometric Aspects of the Representation} \hfill Summer 2016 \\
+          \textbf{Theory of Finite Groups (Summer School \& Workshop)}  \\
+          \textit{Pacific Institute for the Mathematical Sciences}
+    \item \textbf{Character Theory and the McKay Conjecture Summer School} \hfill Summer 2016 \\
+          \textit{Mathematical Sciences Research Institute}
+    \item \textbf{Southeastern Lie Theory Workshop} \hfill Summer 2016 \\
+          \textit{University of Virginia}
+    \item \textbf{Hodge Theory in Combinatorics Mini-Conference} \hfill Spring 2016 \\
+          \textit{Georgia Institute of Technology}
+    \item \textbf{Georgia Algebraic Geometry Symposium} \hfill Fall 2015 \\
+          \textit{Georgia Intstitute of Technology}
+    \item \textbf{Discrete Mathematics and Algorithms} \hfill Fall 2015 \\
+          \textit{Clemson University Mini-Conference}
+    \item \textbf{Georgia Algebraic Geometry Symposium} \hfill Fall 2014 \\
+          \textit{University of Georgia}
+    \item \textbf{Algebraic Geometry Northeastern Series} \hfill Fall 2014 \\
+          \textit{University of Pennsylvania}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Service}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+%   \item \textbf{UGA MathCamp} \hfill Summer 2016 \\
+%         \textit{UGA Department of Mathematics}
+    \item \textbf{Algebra Qualifying Exam Preparation Assistant} \hfill Summer 2016 \\
+          \textit{UGA Department of Mathematics}
+    \item \textbf{Graduate Visitation Day Organizer} \hfill Spring 2016 \\
+        \textit{UGA Department of Mathematics}
+    \item \textbf{President} \hfill Spring 2016 \\
+          \textbf{Secretary} \hfill Fall 2015 \\
+        \textit{UGA Chapter of the American Mathematical Society}
+    \item \textbf{Logistic Organizer} \hfill Fall 2014 -- Spring 2015 \\
+          \textit{Student Algebraic Geometry Seminar}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Graduate Coursework}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item \textbf{University of Georgia:} Elliptic Curves, Varieties, Schemes, Algebraic Curves, Sheaves and Cohomology, Flag Varieties, Lie Algebras, Toric Varieties, Complex Multiplication, Central Simple Algebras, Schubert Calculus VRG, Tropical Geometry VRG.
+    \item \textbf{University of Massachusetts:} Algebra I \& II, Real Analysis I \& II, Complex Analysis, Topology, Manifolds I \& II, Asymptotic Problems, Algebraic Number Theory, Theory of Computation.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching History}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item \textbf{Upward Bound:} SAT / ACT Math \hfill Summer 2014 \\
+          Teacher \hfill Upward Bound Summer Program
+    \item \textbf{Math 300:} Introduction to Proofs \hfill Fall 2013 -- Spring 2014 \\
+          Teaching Assistant \hfill University of Massachusetts
+    \item \textbf{Math 127 \& 128:} Calculus I \& II \hfill Fall 2011 -- Spring 2013 \\
+          Teaching Assistant \hfill University of Massachusetts
+    \item \textbf{Math 235:} Linear Algebra \hfill Fall 2011 -- Spring 2012 \\
+          Supplemental Instruction Leader \hfill University of Massachusetts
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Computer Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item \textbf{General Programming:} Java and Python.
+    \item \textbf{Mathematical Programming:} Sage, Pari/GP, and Magma, R.
+    \item \textbf{Scripting Languages:} Perl, \texttt{bash}.
+    \item \textbf{Markup:} \LaTeX, \texttt{org-mode}, and HTML.
+    \item \textbf{Operating Systems:} Windows, Mac OS, GNU/Linux.
+\end{itemize}
+
+
+\end{document}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
