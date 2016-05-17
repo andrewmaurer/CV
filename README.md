@@ -2,9 +2,9 @@
 
 ## Contact Information
 
-- Department of Mathematics \\
-  Boyd Graduate Research Studies \\
-  University of Georgia \\
+- Department of Mathematics <br>
+  Boyd Graduate Research Studies <br>
+  University of Georgia <br>
   Athens, Georgia 30602
 - [andrew.b.maurer@gmail.com](mailto:andrew.b.maurer@gmail.com)
 - [andrewmaurer.github.io](http://andrewmaurer.github.io)
@@ -18,7 +18,7 @@
 
 ### Mathematics, Bachelor of Science. Computer Science, Minor.
 - University of Massachusetts, Amherst Massachusetts
-- Advisor: [Dr Farshid Hajir](http://math.uga.edu/~hajir)
+- Advisor: [Dr Farshid Hajir](http://peoplemath.umass.edu/~hajir)
 - Senior Project: Hasse-Witt invariants of Jacobi Polynomials.
 
 ## Research
